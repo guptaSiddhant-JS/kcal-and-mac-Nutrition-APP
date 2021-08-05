@@ -1,11 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Button , Text, View } from 'react-native';
 
-export default function CatagoryMeal() {
+export default function CatagoryMeal(props) {
   return (
     <View style={styles.container}>
       <Text>CatagoryMeal</Text>
+      <Button title='Go to Meals' onPress={() =>{
+        props.navigation.navigate({routeName:'MD'});
+      }} />
       <StatusBar style="auto" />
     </View>
   );

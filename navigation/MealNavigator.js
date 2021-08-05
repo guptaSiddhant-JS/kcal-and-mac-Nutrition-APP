@@ -5,8 +5,8 @@ import CatagoryMeal from '../screens/CatagoryMeal';
 import MealDetails from '../screens/MealDetails';
 
 const MealNavigator = createStackNavigator({
-    Catogories:CatagoriesScreen,
-    CMeal:CatagoryMeal,
-    MealD:MealDetails,
+    CS:CatagoriesScreen,
+    CM:CatagoryMeal,
+    MD:MealDetails,
 });
 export default createAppContainer( MealNavigator);

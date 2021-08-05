@@ -1,11 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
-export default function CatagoriesScreen() {
+export default function CatagoriesScreen(props) {
   return (
     <View style={styles.container}>
       <Text>CatagoriesScreen</Text>
+      <Button title='Go to Meals' onPress={() =>{
+        props.navigation.navigate({routeName:'CM'});
+      }} />
       <StatusBar style="auto" />
     </View>
   );
