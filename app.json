@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "kcalandmac-app",
-    "slug": "kcalandmac-app",
+    "name": "km",
+    "slug": "km",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
