@@ -1,24 +1,46 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, ColorPropType, FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import {CATEGORIES} from '../data/dummy-data';
+import Color from './constants/Color'
 
-export default function CatagoriesScreen(props) {
+const CatagoriesScreen = props => {
+  const renderItems= itemData =>{ 
+    return (
+    <TouchableOpacity onPress={() => {
+      props.navigation.navigate({routeName:'CM'});
+    }}>
+      <View  style={styles.container}>
+        <Text>{itemData.item.title}</Text>
+      </View>
+    </TouchableOpacity>
+    );
+  }
   return (
-    <View style={styles.container}>
-      <Text>CatagoriesScreen</Text>
-      <Button title='Go to Meals' onPress={() =>{
-        props.navigation.navigate({routeName:'CM'});
-      }} />
-      <StatusBar style="auto" />
-    </View>
+    <FlatList
+     keyExtractor={(item , index)=> item.id} 
+     data={CATEGORIES}
+     renderItem={renderItems}
+     />
   );
+};
+// Adding Header Title
+CatagoriesScreen.navigationOptions ={
+  headerTitle:'Kcal & Mac',
+  headerStyle:{
+    backgroundColor:Color.primaryColor,
+  },
+  headerTintColor:'white'
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  container:{
+    marginVertical:12,
+    marginHorizontal:25,
+    height: 180,
+    backgroundColor:'#BCFFB9',
+
+
   },
 });
+export default CatagoriesScreen;
