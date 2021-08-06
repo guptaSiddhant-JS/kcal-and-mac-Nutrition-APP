@@ -9,6 +9,9 @@ export default function CatagoryMeal(props) {
       <Button title='Go to Meals' onPress={() =>{
         props.navigation.navigate({routeName:'MD'});
       }} />
+      <Button title='Go Back' onPress={() =>{
+        props.navigation.navigate({routeName:'CS'});
+      }} />
       <StatusBar style="auto" />
     </View>
   );
