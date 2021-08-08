@@ -31,11 +31,7 @@ const CatagoriesScreen = props => {
 };
 // Adding Header Title
 CatagoriesScreen.navigationOptions ={
-  headerTitle:'Kcal & Mac',
-  headerStyle:{
-    backgroundColor:Color.primaryColor,
-  },
-  headerTintColor:'white'
+  headerTitle:'Kcal & Mac'
 }
 
 const styles = StyleSheet.create({

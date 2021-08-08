@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import MealNavigator from './navigation/MealNavigator';
+import {enableScreens} from 'react-native-screens'
 // import * as Font from 'expo-font';
 // import AppLoading from 'expo-app-loading';
 
@@ -11,6 +12,8 @@ import MealNavigator from './navigation/MealNavigator';
 //     'open-sans-bold':require('./assets/fonts/OpenSans-Bold.ttf')
 //   });
 // };
+enableScreens();
+
 export default function App() {
   // const [isFontloaded , setIsFontLoaded] = useState(false);
   // if(!isFontloaded){
@@ -20,6 +23,7 @@ export default function App() {
   //   />
   //   )
   // }
+  
   return <MealNavigator/>
 }
 
